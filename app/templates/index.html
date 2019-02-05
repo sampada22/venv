@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<title>Weather Station</title>
+<head>
+    <meta charset="utf-8" />
+    <title>Weather Station</title>
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link href="{{BASE_URL}}/static/styling.css" rel="stylesheet"/> 
+    <script src="../static/raphael-2.1.4.min.js"></script>
+    <script src="../static/justgage.js"></script>
+    <script src="{{BASE_URL}}/static/index.js"></script>
+  </head>
+<body>
+       <h1>This is the heading</h1> 
+    <table>
+
+        <tr>
+            <td>Humidity</td>
+            <td>Temperature in C </td>
+            <td>Temperature in F</td>
+            <td>Heat Index in Fahrenheit</td>
+            <td>Heat Index in Celsius</td>
+        </tr>
+
+        <tr>
+          <td>{{humidity}}</td>
+            <td>{{temp_in_C}}</td>
+            <td>{{temp_in_F}}</td>
+            <td>{{heatIndex_in_C}}</td>
+            <td>{{heatIndex_in_F}}</td>
+        </tr>
+    </table>
+</body>

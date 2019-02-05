@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<title>Weather Station</title>
+<head>
+        <link rel="stylesheet" href='../static/styling.css'/>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <style>
+            body {
+                text-align: center;
+            }
+            #g1,
+            #g2 {
+                width: 200px;
+                height: 160px;
+                display: inline-block;
+                margin: 7ssem;
+            }
+        </style>
+ </head>
+    
+    <body>
+        <div id="g1" ></div>
+        <div id="g2"></div>   
+        <div id = "g3"></div>     
+        <script src="../static/raphael-2.1.4.min.js"></script>
+        <script src="../static/justgage.js"></script>
+        <script>
+            var g1, g2;
+            document.addEventListener("DOMContentLoaded", function(event) {
+                
+                g1 = new JustGage({
+                   
+                    id: "g1",
+                    gaugeWidthScale : 1.0,
+                    value: 16,
+                    titleFontColor :"black",
+                    min: -10,
+                    
+                    valueFontColor: "white",
+                    max: 50,
+                    title: "Temperature",
+                    label: "Celcius"
+                    
+                    
+                });
+                g2 = new JustGage({
+                    id: "g2",
+                    gaugeWidthScale :1.0,
+                    value:67,
+                    
+                    valueFontColor: "white",
+                    titleFontColor :"black",
+                    min: 0,
+                    max: 100,
+                    title: "Humidity",
+                    label: "%"
+                });
+                g3 = new JustGage({
+                    id: "g3",
+                    gaugeWidthScale :1.0,
+                    value:20,
+                    
+                    titleFontColor :"black",
+                    valueFontColor: "white",
+                    min: 0,
+                    max: 100,
+                    title: "Heat Index",
+                    label: "%"
+                });
+            });
+        </script>
+        <h1>Humidity :{{humidity}}% </h1>
+        <h1>Temperature :{{temp_in_C}}	&#176 C</h1>
+        <h1>Heat Index :{{heatIndex_in_C}} &#176 F</h1>
+        <img src="/plot/temp" alt="Image Placeholder" width="49%">
+        <img src="/plot/hum" alt="Image Placeholder" width="49%">
+        <img src="/plot/heatIndex" alt="Image Placeholder" width="49%">
+
+    </body>
+    
+    </html>
